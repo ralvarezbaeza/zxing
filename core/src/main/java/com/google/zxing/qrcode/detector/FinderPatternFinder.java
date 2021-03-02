@@ -621,7 +621,9 @@ public class FinderPatternFinder {
       throw NotFoundException.getNotFoundInstance();
     }
 
-    possibleCenters.sort(moduleComparator);
+      Collections.sort(possibleCenters, moduleComparator);
+
+   /// possibleCenters.sort(moduleComparator);
 
     double distortion = Double.MAX_VALUE;
     FinderPattern[] bestPatterns = new FinderPattern[3];
